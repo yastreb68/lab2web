@@ -1,0 +1,21 @@
+plugins {
+    id 'java'
+    id 'war'
+}
+
+group 'testlab'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compileOnly('jakarta.servlet:jakarta.servlet-api:6.0.0')
+    implementation 'com.google.code.gson:gson:2.11.0'
+    testImplementation("org.junit.jupiter:junit-jupiter-api:5.9.1")
+    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.9.1")
+}
+
+test {
+    useJUnitPlatform()
+}
